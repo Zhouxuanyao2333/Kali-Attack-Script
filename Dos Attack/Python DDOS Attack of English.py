@@ -14,7 +14,9 @@ month = now.month
 year = now.year
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
+os.system("clear")
 #attact
+print("If there is a problem with the display, adjust the terminal to full-screen mode and then reopen the script")
 print(" _____________________________________________________________________________________ ")
 print("╱                                                                                     ╲")
 print('''|     _ \        __ \  __ \               ___|           _)       |                    |

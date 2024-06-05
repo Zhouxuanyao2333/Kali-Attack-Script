@@ -14,7 +14,9 @@ month = now.month
 year = now.year
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 bytes = random._urandom(1490)
+os.system("clear")
 #attact
+print("如果显示有问题，请将终端全屏之后再打开该脚本")
 print(" _____________________________________________________________________________________ ")
 print("╱                                                                                     ╲")
 print('''|     _ \        __ \  __ \               ___|           _)       |                    |
